@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">DicodingEvent</string>
+    <string name="home">Home</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="finished">Finished</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search_events">Search events...</string>
+    <string name="upcoming_events">Upcoming Events</string>
+    <string name="finished_events">Finished Events</string>
+    <string name="register_now">Register Now</string>
+    <string name="judul_event_panjang_banget_sampe_dua_baris">Judul Event Panjang Banget Sampe Dua Baris</string>
+    <string name="dicoding_event">Dicoding Event</string>
+    <string name="summary_singkat_padat_jelas">Summary singkat padat jelas</string>
+</resources>

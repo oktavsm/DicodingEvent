@@ -1,0 +1,20 @@
+<resources>
+    <color name="primary_dark">#1A1A1D</color>
+    <color name="accent_blue">#007BFF</color>
+    <color name="surface_card">#2C2C2E</color>
+    <color name="text_high_emphasis">#FFFFFF</color>
+    <color name="text_medium_emphasis">#A1A1A1</color>
+
+    <color name="status_upcoming">#4CAF50</color>
+    <color name="status_finished">#F44336</color>
+
+
+    <color name="bg_soft_grey">#F0F0F3</color>
+    <color name="accent_green">#98B66E</color>
+    <color name="white">#FFFFFF</color>
+    <color name="text_dark">#333333</color>
+    <color name="text_grey">#757575</color>
+    <color name="teal_200">#80CBC4</color>
+    <color name="purple_500">#9C27B0</color>
+    <color name="purple_200">#CE93D8</color>
+</resources>
