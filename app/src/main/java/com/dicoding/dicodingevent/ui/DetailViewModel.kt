@@ -9,6 +9,7 @@ import com.dicoding.dicodingevent.data.retrofit.ApiConfig
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import com.dicoding.dicodingevent.utils.Events
 
 class DetailViewModel : ViewModel() {
 
@@ -18,6 +19,12 @@ class DetailViewModel : ViewModel() {
     private val _isLoading = MutableLiveData<Boolean>()
     val isLoading: LiveData<Boolean> = _isLoading
 
+    private val _errorMessage = MutableLiveData<Events<String>>()
+    val errorMessage: LiveData<Events<String>> = _errorMessage
+
+    private fun setError(message: String) {
+        _errorMessage.value = Events(message)
+    }
     fun getDetailEvent(id: String){
         _isLoading.value = true
         val client = ApiConfig.getApiService().getEventDetail(id)
@@ -29,12 +36,14 @@ class DetailViewModel : ViewModel() {
                 _isLoading.value = false
                 if (response.isSuccessful) {
                     _eventDetail.value = response.body()?.event as Event
+                } else {
+                    setError("Error: ${response.message()}")
                 }
             }
 
             override fun onFailure(call: Call<DetailEventResponse?>, t: Throwable) {
                 _isLoading.value = false
-                t.printStackTrace()
+                setError("Gagal memuat data: ${t.message}")
             }
         })
     }

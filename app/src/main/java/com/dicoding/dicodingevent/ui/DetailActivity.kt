@@ -13,6 +13,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.dicoding.dicodingevent.R
 import com.dicoding.dicodingevent.databinding.ActivityDetailBinding
+import com.google.android.material.snackbar.Snackbar
 
 class DetailActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailBinding
@@ -50,6 +51,13 @@ class DetailActivity : AppCompatActivity() {
                 intent.data = Uri.parse(event.link)
                 startActivity(intent)
             }
+
+            viewModel.errorMessage.observe(this) { event ->
+                event.getContentIfNotHandled()?.let { message ->
+                    Snackbar.make(binding.root, message, Snackbar.LENGTH_LONG).show()
+                }
+            }
+
         }
 
         viewModel.isLoading.observe(this){ isLoading ->

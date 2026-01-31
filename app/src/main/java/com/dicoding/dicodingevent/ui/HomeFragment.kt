@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dicoding.dicodingevent.data.response.ListEventsItem
 import com.dicoding.dicodingevent.databinding.FragmentHomeBinding
+import com.google.android.material.snackbar.Snackbar
 
 
 class HomeFragment : Fragment(){
@@ -70,31 +71,28 @@ class HomeFragment : Fragment(){
             binding.progressBar.visibility= if(isLoading) View.VISIBLE else View.GONE
         }
 
+        viewModel.errorMessage.observe(viewLifecycleOwner) { event ->
+            event.getContentIfNotHandled()?.let { message ->
+                Snackbar.make(binding.root, message, Snackbar.LENGTH_LONG).show()
+            }
+        }
+
         if (viewModel.listUpcoming.value == null) viewModel.getEvents(1)
         if (viewModel.listFinished.value == null) viewModel.getEvents(0)
 
         //searchbar
+        binding.searchView.setupWithSearchBar(binding.searchBar)
+        binding.searchView.editText.setOnEditorActionListener { _, _, _ ->
+            val query = binding.searchView.text.toString()
+            if (query.isNotEmpty()) {
+                binding.searchView.hide()
 
 
-        with(binding){
-            searchView.setupWithSearchBar(searchBar)
-            searchView.editText.setOnEditorActionListener { textView, actionId, event ->
-                val query = searchView.text.toString()
-                searchBar.setText(query)
-                if (query.isEmpty()) {
-                    viewModel.searchEvents(query)
-                    searchView.hide()
-                } else{
-                    finishedAdapter.submitList(emptyList())
-                    searchView.hide()
-                }
-                false
+                val intent = Intent(requireContext(), SearchResultActivity::class.java)
+                intent.putExtra(SearchResultActivity.EXTRA_QUERY, query)
+                startActivity(intent)
             }
-        }
-
-        viewModel.listSearch.observe(viewLifecycleOwner) { searchResult ->
-            finishedAdapter.submitList(searchResult)
-            binding.rvFinishedHome.scrollToPosition(0)
+            false
         }
     }
 

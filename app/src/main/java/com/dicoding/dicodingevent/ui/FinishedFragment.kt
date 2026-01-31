@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dicoding.dicodingevent.data.response.Event
 import com.dicoding.dicodingevent.databinding.FragmentFinishedBinding
+import com.google.android.material.snackbar.Snackbar
 
 class FinishedFragment : Fragment() {
     private var _binding: FragmentFinishedBinding? = null
@@ -46,6 +47,11 @@ class FinishedFragment : Fragment() {
 
         viewModel.isLoading.observe(viewLifecycleOwner){ isLoading ->
             binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
+        }
+        viewModel.errorMessage.observe(viewLifecycleOwner) { event ->
+            event.getContentIfNotHandled()?.let { message ->
+                Snackbar.make(binding.root, message, Snackbar.LENGTH_LONG).show()
+            }
         }
 
         viewModel.getEvents(0)
