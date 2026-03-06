@@ -1,17 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">DicodingEvent</string>
+    <string name="app_name">Dicoding Event</string>
+
+    <!-- Navigation -->
     <string name="home">Home</string>
     <string name="upcoming">Upcoming</string>
     <string name="finished">Finished</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="search_events">Search events...</string>
-    <string name="upcoming_events">Upcoming Events</string>
-    <string name="finished_events">Finished Events</string>
+    <string name="favorite">Favorite</string>
+    <string name="favorites">Favorites</string>
+    <string name="setting">Setting</string>
+
+    <!-- Home -->
+    <string name="search_events">Search events…</string>
+    <string name="explore_events">Explore Events</string>
+    <string name="discover_whats_happening">Discover what\'s happening</string>
+    <string name="see_all">See all →</string>
+
+    <!-- Detail -->
     <string name="register_now">Register Now</string>
-    <string name="judul_event_panjang_banget_sampe_dua_baris">Judul Event Panjang Banget Sampe Dua Baris</string>
-    <string name="dicoding_event">Dicoding Event</string>
-    <string name="summary_singkat_padat_jelas">Summary singkat padat jelas</string>
-    <string name="cari_event">Cari event...</string>
-    <string name="hasil_tidak_ditemukan">Hasil tidak ditemukan</string>
+    <string name="time">Time</string>
+    <string name="quota">Quota</string>
+    <string name="quota_remaining">Sisa: %d slot</string>
+
+    <!-- Empty states -->
+    <string name="no_favorites">No favorites yet</string>
+    <string name="no_favorites_hint">Tap ♡ on any event to save it here</string>
+    <string name="no_results">No results found</string>
+
+    <!-- Settings -->
+    <string name="settings">Settings</string>
+    <string name="appearance">APPEARANCE</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="switch_to_dark_theme">Switch to dark theme</string>
+    <string name="notifications">NOTIFICATIONS</string>
+    <string name="daily_reminder">Daily Reminder</string>
+    <string name="daily_reminder_desc">Get notified about upcoming events</string>
+
+    <!-- Content descriptions -->
+    <string name="event_image">Event image</string>
+    <string name="back">Back</string>
+    <string name="toggle_favorite">Toggle favorite</string>
 </resources>

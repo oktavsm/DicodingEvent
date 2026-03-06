@@ -1,39 +1,39 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_soft_grey">
+    android:background="?android:attr/colorBackground">
 
     <com.google.android.material.search.SearchBar
         android:id="@+id/searchBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/cari_event"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:hint="@string/search_events"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.search.SearchView
         android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:hint="@string/cari_event"
-        app:layout_anchor="@id/searchBar"/>
+        android:hint="@string/search_events"
+        app:layout_anchor="@id/searchBar" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        app:layout_constraintTop_toBottomOf="@+id/searchBar"
-        app:tabIndicatorColor="@color/purple_500"
-        app:tabSelectedTextAppearance="@color/purple_500" />
+        android:background="?android:attr/colorBackground"
+        app:tabIndicatorColor="@color/accent_blue"
+        app:tabSelectedTextColor="@color/accent_blue"
+        app:layout_constraintTop_toBottomOf="@id/searchBar" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tabs" />
+        app:layout_constraintTop_toBottomOf="@id/tabs" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,21 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary_dark">#1A1A1D</color>
-    <color name="accent_blue">#007BFF</color>
-    <color name="surface_card">#2C2C2E</color>
-    <color name="text_high_emphasis">#FFFFFF</color>
-    <color name="text_medium_emphasis">#A1A1A1</color>
+    <!-- Primary palette -->
+    <color name="accent_blue">#3B82F6</color>
+    <color name="accent_blue_dark">#2563EB</color>
+    <color name="accent_blue_light">#1E3A5F</color>
 
-    <color name="status_upcoming">#4CAF50</color>
-    <color name="status_finished">#F44336</color>
+    <!-- Backgrounds dark -->
+    <color name="bg_light">#0F172A</color>
+    <color name="bg_surface_light">#1E293B</color>
+    <color name="bg_dark">#0F172A</color>
+    <color name="bg_surface_dark">#1E293B</color>
 
+    <!-- Text dark -->
+    <color name="text_primary_light">#F8FAFC</color>
+    <color name="text_secondary_light">#94A3B8</color>
+    <color name="text_primary_dark">#F8FAFC</color>
+    <color name="text_secondary_dark">#94A3B8</color>
 
-    <color name="bg_soft_grey">#F0F0F3</color>
-    <color name="accent_green">#98B66E</color>
+    <!-- Nav -->
+    <color name="nav_active">#3B82F6</color>
+    <color name="nav_inactive_light">#64748B</color>
+    <color name="nav_inactive_dark">#64748B</color>
+
+    <!-- Misc -->
     <color name="white">#FFFFFF</color>
-    <color name="text_dark">#333333</color>
-    <color name="text_grey">#757575</color>
-    <color name="teal_200">#80CBC4</color>
-    <color name="purple_500">#9C27B0</color>
-    <color name="purple_200">#CE93D8</color>
+    <color name="black">#000000</color>
+    <color name="divider">#2D3748</color>
+
 </resources>

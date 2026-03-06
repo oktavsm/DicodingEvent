@@ -1,18 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+
     <item
         android:id="@+id/navigation_home"
-        android:title="@string/home"
-        android:icon="@drawable/ic_home_vector"/>
+        android:icon="@drawable/ic_home_vector"
+        android:title="@string/home" />
 
     <item
         android:id="@+id/navigation_upcoming"
-        android:title="@string/upcoming"
-        android:icon="@drawable/ic_upcoming_vector" />
+        android:icon="@drawable/ic_upcoming_vector"
+        android:title="@string/upcoming" />
 
     <item
         android:id="@+id/navigation_finished"
-        android:title="@string/finished"
-        android:icon="@drawable/ic_finished_vector"/>
+        android:icon="@drawable/ic_finished_vector"
+        android:title="@string/finished" />
+
+    <item
+        android:id="@+id/navigation_favorite"
+        android:icon="@drawable/ic_favorite_border"
+        android:title="@string/favorite" />
+
+    <item
+        android:id="@+id/navigation_setting"
+        android:icon="@drawable/ic_setting"
+        android:title="@string/setting" />
 
 </menu>

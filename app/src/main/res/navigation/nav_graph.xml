@@ -5,19 +5,35 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/navigation_home">
 
+
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.dicoding.dicodingevent.ui.HomeFragment"
-        android:label="fragment_home"
+        android:name="com.dicoding.dicodingevent.ui.home.HomeFragment"
+        android:label="Home"
         tools:layout="@layout/fragment_home" />
-    <fragment
-        android:id="@+id/navigation_finished"
-        android:name="com.dicoding.dicodingevent.ui.FinishedFragment"
-        android:label="fragment_finished"
-        tools:layout="@layout/fragment_finished" />
+
     <fragment
         android:id="@+id/navigation_upcoming"
-        android:name="com.dicoding.dicodingevent.ui.UpcomingFragment"
-        android:label="fragment_upcoming"
-        tools:layout="@layout/fragment_upcoming" />
+        android:name="com.dicoding.dicodingevent.ui.upcoming.UpcomingFragment"
+        android:label="Upcoming"
+        tools:layout="@layout/fragment_event_list" />
+
+    <fragment
+        android:id="@+id/navigation_finished"
+        android:name="com.dicoding.dicodingevent.ui.finished.FinishedFragment"
+        android:label="Finished"
+        tools:layout="@layout/fragment_event_list" />
+
+    <fragment
+        android:id="@+id/navigation_favorite"
+        android:name="com.dicoding.dicodingevent.ui.favorite.FavoriteFragment"
+        android:label="Favorite"
+        tools:layout="@layout/fragment_favorite" />
+
+    <fragment
+        android:id="@+id/navigation_setting"
+        android:name="com.dicoding.dicodingevent.ui.setting.SettingFragment"
+        android:label="Setting"
+        tools:layout="@layout/fragment_setting" />
+
 </navigation>
